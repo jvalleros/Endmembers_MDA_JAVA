@@ -158,6 +158,7 @@ public class App {
 
     public static void main(String[] args) throws IOException {
         // Lectura del fichero//
+        System.getProperty("java.classpath");
         MatFile mat = Mat5.readFromFile("/home/panda/TFM/TFM/first-version/src/main/java/tfm/DATA5.mat");
         System.out.println(mat);
         DMatrixRMaj matrixMixed = Mat5Ejml.convert(mat.getArray("mixed"), new DMatrixRMaj(0, 0));
